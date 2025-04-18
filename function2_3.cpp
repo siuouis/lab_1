@@ -13,3 +13,18 @@ void writeDataToFile(const std::vector<std::string>& lines, const std::string& d
         outputFile.close();
     }
 }
+
+void writeVectorToFile(const std::vector<int>& vec, const std::string& filename) {
+    std::ofstream outFile(filename);
+    if (outFile.is_open()) {
+        outFile << "Содержимое вектора: ";
+        for (const auto& element : vec) {
+            outFile << element << " ";
+        }
+        outFile << std::endl;
+        outFile.close();
+        std::cout << "Данные успешно записаны в файл " << filename << std::endl;
+    } else {
+        std::cerr << "Не удалось открыть файл для записи" << std::endl;
+    }
+}
