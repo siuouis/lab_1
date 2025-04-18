@@ -2,8 +2,8 @@
 #include <fstream>
 #include <vector>
 #include <string>
-#include "function1.h"
 #include "function23.h"
+#include "function1.h"
 using namespace std;
 
 int main() {
@@ -12,7 +12,6 @@ int main() {
     vector<string> lines;
 
     readDataFromFile(sourceFileName, lines);
-
     writeDataToFile(lines, destFileName);
 
     return 0;
